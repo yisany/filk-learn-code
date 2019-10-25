@@ -1,4 +1,4 @@
-package com.yis.dateStream;
+package com.yis.dateStream.dataSource;
 
 import com.yis.InitEnv;
 import org.apache.flink.api.common.serialization.SimpleStringSchema;

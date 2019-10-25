@@ -1,4 +1,4 @@
-package com.yis;
+package com.yis.entity;
 
 import lombok.Data;
 
