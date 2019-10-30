@@ -8,16 +8,16 @@ import java.util.Arrays;
 
 /**
  * @author milu
- * @Description flatmap转换
- * @createTime 2019年10月21日 19:40:00
+ * @Description filter操作
+ * @createTime 2019年10月28日 19:11:00
  */
-public class FlatMapTransform {
+public class FilterTransform {
 
     public static void main(String[] args) {
         StreamExecutionEnvironment env = InitEnv.getEnv();
-        DataStream<String> source = env.fromElements("abc_bcd_cde_def_efg");
-        DataStream<Object> flatMapStream = source.flatMap((s, c) -> c.collect(s.split("_")));
-        flatMapStream.print();
+        DataStream<Integer> dataStream = env.fromCollection(Arrays.asList(1, 2, 3, 4, 5, 6));
+        DataStream<Integer> filter = dataStream.filter(a -> a > 2);
+        filter.print();
     }
 
 }
